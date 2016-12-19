@@ -2,6 +2,7 @@
  * Created by YA on 19.12.2016.
  */
 
+import beans.GeoCoderResponse;
 import com.google.gson.Gson;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
@@ -62,7 +63,7 @@ public class GeoCoderApi {
         return new ApiBuilder(gcApi);
     }
 
-    public static beans.Response getGeoCoderJsonFromResp(Response response){
-        return new Gson().fromJson(response.asString(), beans.Response.class);
+    public static GeoCoderResponse getGeoCoderJsonFromResp(Response response){
+        return new Gson().fromJson(response.asString(), GeoCoderResponse.class);
     }
 }

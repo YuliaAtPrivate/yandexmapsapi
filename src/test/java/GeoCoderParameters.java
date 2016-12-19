@@ -1,3 +1,4 @@
+import beans.GeoCoderResponse;
 import org.junit.Test;
 
 /**
@@ -8,12 +9,13 @@ public class GeoCoderParameters {
 
     @Test
     public void tryCallMapApi() {
-       beans.Response resp = GeoCoderApi.getGeoCoderJsonFromResp(GeoCoderApi.with()
+       GeoCoderResponse resp = GeoCoderApi.getGeoCoderJsonFromResp(GeoCoderApi.with()
                .geocode(GeoPoints.EPAM_SPB02.address)
                .language(Lang.ENGLISH.languageCode)
                .format("json")
                .callApi());
-        System.out.println(resp.toString());
+
+       System.out.println(resp.toString()); //todo: kill debug   :)
 
     }
 }

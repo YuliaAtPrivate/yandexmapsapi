@@ -11,26 +11,26 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 @Generated("org.jsonschema2pojo")
 public class YandexMapsJSON {
 
-    @SerializedName("response")
+    @SerializedName("geoCoderResponse")
     @Expose
-    private Response response;
+    private GeoCoderResponse geoCoderResponse;
 
     /**
      * 
      * @return
-     *     The response
+     *     The geoCoderResponse
      */
-    public Response getResponse() {
-        return response;
+    public GeoCoderResponse getGeoCoderResponse() {
+        return geoCoderResponse;
     }
 
     /**
      * 
-     * @param response
-     *     The response
+     * @param geoCoderResponse
+     *     The geoCoderResponse
      */
-    public void setResponse(Response response) {
-        this.response = response;
+    public void setGeoCoderResponse(GeoCoderResponse geoCoderResponse) {
+        this.geoCoderResponse = geoCoderResponse;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class YandexMapsJSON {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(response).toHashCode();
+        return new HashCodeBuilder().append(geoCoderResponse).toHashCode();
     }
 
     @Override
@@ -52,7 +52,7 @@ public class YandexMapsJSON {
             return false;
         }
         YandexMapsJSON rhs = ((YandexMapsJSON) other);
-        return new EqualsBuilder().append(response, rhs.response).isEquals();
+        return new EqualsBuilder().append(geoCoderResponse, rhs.geoCoderResponse).isEquals();
     }
 
 }
