@@ -1,4 +1,3 @@
-import com.jayway.restassured.response.Response;
 import org.junit.Test;
 
 /**
@@ -9,9 +8,12 @@ public class GeoCoderParameters {
 
     @Test
     public void tryCallMapApi() {
-       Response res = GeoCoderApi.with()
+       beans.Response resp = GeoCoderApi.getGeoCoderJsonFromResp(GeoCoderApi.with()
                .geocode(GeoPoints.EPAM_SPB02.address)
-               .language(Languages.ENGLISH.languageCode)
-               .callApi();
+               .language(Lang.ENGLISH.languageCode)
+               .format("json")
+               .callApi());
+        System.out.println(resp.toString());
+
     }
 }
