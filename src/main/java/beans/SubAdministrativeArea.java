@@ -1,57 +1,35 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class SubAdministrativeArea {
 
     @SerializedName("SubAdministrativeAreaName")
     @Expose
-    private String SubAdministrativeAreaName;
+    private String subAdministrativeAreaName;
     @SerializedName("Locality")
     @Expose
-    private beans.Locality Locality;
+    private Locality locality;
 
-    /**
-     * 
-     * @return
-     *     The SubAdministrativeAreaName
-     */
     public String getSubAdministrativeAreaName() {
-        return SubAdministrativeAreaName;
+        return subAdministrativeAreaName;
     }
 
-    /**
-     * 
-     * @param SubAdministrativeAreaName
-     *     The SubAdministrativeAreaName
-     */
-    public void setSubAdministrativeAreaName(String SubAdministrativeAreaName) {
-        this.SubAdministrativeAreaName = SubAdministrativeAreaName;
+    public void setSubAdministrativeAreaName(String subAdministrativeAreaName) {
+        this.subAdministrativeAreaName = subAdministrativeAreaName;
     }
 
-    /**
-     * 
-     * @return
-     *     The Locality
-     */
-    public beans.Locality getLocality() {
-        return Locality;
+    public Locality getLocality() {
+        return locality;
     }
 
-    /**
-     * 
-     * @param Locality
-     *     The Locality
-     */
-    public void setLocality(beans.Locality Locality) {
-        this.Locality = Locality;
+    public void setLocality(Locality locality) {
+        this.locality = locality;
     }
 
     @Override
@@ -61,7 +39,7 @@ public class SubAdministrativeArea {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(SubAdministrativeAreaName).append(Locality).toHashCode();
+        return new HashCodeBuilder().append(subAdministrativeAreaName).append(locality).toHashCode();
     }
 
     @Override
@@ -73,7 +51,7 @@ public class SubAdministrativeArea {
             return false;
         }
         SubAdministrativeArea rhs = ((SubAdministrativeArea) other);
-        return new EqualsBuilder().append(SubAdministrativeAreaName, rhs.SubAdministrativeAreaName).append(Locality, rhs.Locality).isEquals();
+        return new EqualsBuilder().append(subAdministrativeAreaName, rhs.subAdministrativeAreaName).append(locality, rhs.locality).isEquals();
     }
 
 }

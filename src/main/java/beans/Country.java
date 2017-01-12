@@ -1,99 +1,57 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Country {
 
     @SerializedName("AddressLine")
     @Expose
-    private String AddressLine;
+    private String addressLine;
     @SerializedName("CountryNameCode")
     @Expose
-    private String CountryNameCode;
+    private String countryNameCode;
     @SerializedName("CountryName")
     @Expose
-    private String CountryName;
+    private String countryName;
     @SerializedName("AdministrativeArea")
     @Expose
-    private beans.AdministrativeArea AdministrativeArea;
+    private AdministrativeArea administrativeArea;
 
-    /**
-     * 
-     * @return
-     *     The AddressLine
-     */
     public String getAddressLine() {
-        return AddressLine;
+        return addressLine;
     }
 
-    /**
-     * 
-     * @param AddressLine
-     *     The AddressLine
-     */
-    public void setAddressLine(String AddressLine) {
-        this.AddressLine = AddressLine;
+    public void setAddressLine(String addressLine) {
+        this.addressLine = addressLine;
     }
 
-    /**
-     * 
-     * @return
-     *     The CountryNameCode
-     */
     public String getCountryNameCode() {
-        return CountryNameCode;
+        return countryNameCode;
     }
 
-    /**
-     * 
-     * @param CountryNameCode
-     *     The CountryNameCode
-     */
-    public void setCountryNameCode(String CountryNameCode) {
-        this.CountryNameCode = CountryNameCode;
+    public void setCountryNameCode(String countryNameCode) {
+        this.countryNameCode = countryNameCode;
     }
 
-    /**
-     * 
-     * @return
-     *     The CountryName
-     */
     public String getCountryName() {
-        return CountryName;
+        return countryName;
     }
 
-    /**
-     * 
-     * @param CountryName
-     *     The CountryName
-     */
-    public void setCountryName(String CountryName) {
-        this.CountryName = CountryName;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
-    /**
-     * 
-     * @return
-     *     The AdministrativeArea
-     */
-    public beans.AdministrativeArea getAdministrativeArea() {
-        return AdministrativeArea;
+    public AdministrativeArea getAdministrativeArea() {
+        return administrativeArea;
     }
 
-    /**
-     * 
-     * @param AdministrativeArea
-     *     The AdministrativeArea
-     */
-    public void setAdministrativeArea(beans.AdministrativeArea AdministrativeArea) {
-        this.AdministrativeArea = AdministrativeArea;
+    public void setAdministrativeArea(AdministrativeArea administrativeArea) {
+        this.administrativeArea = administrativeArea;
     }
 
     @Override
@@ -103,7 +61,7 @@ public class Country {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(AddressLine).append(CountryNameCode).append(CountryName).append(AdministrativeArea).toHashCode();
+        return new HashCodeBuilder().append(addressLine).append(countryNameCode).append(countryName).append(administrativeArea).toHashCode();
     }
 
     @Override
@@ -115,7 +73,7 @@ public class Country {
             return false;
         }
         Country rhs = ((Country) other);
-        return new EqualsBuilder().append(AddressLine, rhs.AddressLine).append(CountryNameCode, rhs.CountryNameCode).append(CountryName, rhs.CountryName).append(AdministrativeArea, rhs.AdministrativeArea).isEquals();
+        return new EqualsBuilder().append(addressLine, rhs.addressLine).append(countryNameCode, rhs.countryNameCode).append(countryName, rhs.countryName).append(administrativeArea, rhs.administrativeArea).isEquals();
     }
 
 }

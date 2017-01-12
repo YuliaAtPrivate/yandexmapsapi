@@ -1,36 +1,24 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class FeatureMember {
 
     @SerializedName("GeoObject")
     @Expose
-    private beans.GeoObject GeoObject;
+    private GeoObject geoObject;
 
-    /**
-     * 
-     * @return
-     *     The GeoObject
-     */
-    public beans.GeoObject getGeoObject() {
-        return GeoObject;
+    public GeoObject getGeoObject() {
+        return geoObject;
     }
 
-    /**
-     * 
-     * @param GeoObject
-     *     The GeoObject
-     */
-    public void setGeoObject(beans.GeoObject GeoObject) {
-        this.GeoObject = GeoObject;
+    public void setGeoObject(GeoObject geoObject) {
+        this.geoObject = geoObject;
     }
 
     @Override
@@ -40,7 +28,7 @@ public class FeatureMember {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(GeoObject).toHashCode();
+        return new HashCodeBuilder().append(geoObject).toHashCode();
     }
 
     @Override
@@ -52,7 +40,7 @@ public class FeatureMember {
             return false;
         }
         FeatureMember rhs = ((FeatureMember) other);
-        return new EqualsBuilder().append(GeoObject, rhs.GeoObject).isEquals();
+        return new EqualsBuilder().append(geoObject, rhs.geoObject).isEquals();
     }
 
 }

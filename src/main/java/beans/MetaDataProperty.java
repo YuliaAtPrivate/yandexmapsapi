@@ -1,36 +1,24 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class MetaDataProperty {
 
     @SerializedName("GeocoderResponseMetaData")
     @Expose
-    private beans.GeocoderResponseMetaData GeocoderResponseMetaData;
+    private GeocoderResponseMetaData geocoderResponseMetaData;
 
-    /**
-     * 
-     * @return
-     *     The GeocoderResponseMetaData
-     */
-    public beans.GeocoderResponseMetaData getGeocoderResponseMetaData() {
-        return GeocoderResponseMetaData;
+    public GeocoderResponseMetaData getGeocoderResponseMetaData() {
+        return geocoderResponseMetaData;
     }
 
-    /**
-     * 
-     * @param GeocoderResponseMetaData
-     *     The GeocoderResponseMetaData
-     */
-    public void setGeocoderResponseMetaData(beans.GeocoderResponseMetaData GeocoderResponseMetaData) {
-        this.GeocoderResponseMetaData = GeocoderResponseMetaData;
+    public void setGeocoderResponseMetaData(GeocoderResponseMetaData geocoderResponseMetaData) {
+        this.geocoderResponseMetaData = geocoderResponseMetaData;
     }
 
     @Override
@@ -40,7 +28,7 @@ public class MetaDataProperty {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(GeocoderResponseMetaData).toHashCode();
+        return new HashCodeBuilder().append(geocoderResponseMetaData).toHashCode();
     }
 
     @Override
@@ -52,7 +40,7 @@ public class MetaDataProperty {
             return false;
         }
         MetaDataProperty rhs = ((MetaDataProperty) other);
-        return new EqualsBuilder().append(GeocoderResponseMetaData, rhs.GeocoderResponseMetaData).isEquals();
+        return new EqualsBuilder().append(geocoderResponseMetaData, rhs.geocoderResponseMetaData).isEquals();
     }
 
 }

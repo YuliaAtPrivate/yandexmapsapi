@@ -1,57 +1,35 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Locality {
 
     @SerializedName("LocalityName")
     @Expose
-    private String LocalityName;
+    private String localityName;
     @SerializedName("Thoroughfare")
     @Expose
-    private beans.Thoroughfare Thoroughfare;
+    private Thoroughfare thoroughfare;
 
-    /**
-     * 
-     * @return
-     *     The LocalityName
-     */
     public String getLocalityName() {
-        return LocalityName;
+        return localityName;
     }
 
-    /**
-     * 
-     * @param LocalityName
-     *     The LocalityName
-     */
-    public void setLocalityName(String LocalityName) {
-        this.LocalityName = LocalityName;
+    public void setLocalityName(String localityName) {
+        this.localityName = localityName;
     }
 
-    /**
-     * 
-     * @return
-     *     The Thoroughfare
-     */
-    public beans.Thoroughfare getThoroughfare() {
-        return Thoroughfare;
+    public Thoroughfare getThoroughfare() {
+        return thoroughfare;
     }
 
-    /**
-     * 
-     * @param Thoroughfare
-     *     The Thoroughfare
-     */
-    public void setThoroughfare(beans.Thoroughfare Thoroughfare) {
-        this.Thoroughfare = Thoroughfare;
+    public void setThoroughfare(Thoroughfare thoroughfare) {
+        this.thoroughfare = thoroughfare;
     }
 
     @Override
@@ -61,7 +39,7 @@ public class Locality {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(LocalityName).append(Thoroughfare).toHashCode();
+        return new HashCodeBuilder().append(localityName).append(thoroughfare).toHashCode();
     }
 
     @Override
@@ -73,7 +51,7 @@ public class Locality {
             return false;
         }
         Locality rhs = ((Locality) other);
-        return new EqualsBuilder().append(LocalityName, rhs.LocalityName).append(Thoroughfare, rhs.Thoroughfare).isEquals();
+        return new EqualsBuilder().append(localityName, rhs.localityName).append(thoroughfare, rhs.thoroughfare).isEquals();
     }
 
 }

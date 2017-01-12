@@ -6,6 +6,8 @@ import beans.GeoCoderResponse;
 import com.google.gson.Gson;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
+import ru.yandex.qatools.allure.annotations.Attachment;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,13 +52,20 @@ public class GeoCoderApi {
             return this;
         }
 
+        @Step("step number one")
         public Response callApi() {
-            return RestAssured.with()
+            Response response = RestAssured.with()
                     .queryParams(geoCoderApi.params)
                     .log().all()
-                    .get(MAP_API_URI).prettyPeek();
+                    .get(MAP_API_URI);
+            log(response.asString());
+            return response;
         }
     }
+
+    @Step("Log")
+    @Attachment(type = "application/json")
+    private static String log(String text){return text;}
 
     public static ApiBuilder with() {
         GeoCoderApi gcApi = new GeoCoderApi();

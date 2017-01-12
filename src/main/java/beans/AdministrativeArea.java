@@ -1,57 +1,35 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class AdministrativeArea {
 
     @SerializedName("AdministrativeAreaName")
     @Expose
-    private String AdministrativeAreaName;
+    private String administrativeAreaName;
     @SerializedName("SubAdministrativeArea")
     @Expose
-    private beans.SubAdministrativeArea SubAdministrativeArea;
+    private SubAdministrativeArea subAdministrativeArea;
 
-    /**
-     * 
-     * @return
-     *     The AdministrativeAreaName
-     */
     public String getAdministrativeAreaName() {
-        return AdministrativeAreaName;
+        return administrativeAreaName;
     }
 
-    /**
-     * 
-     * @param AdministrativeAreaName
-     *     The AdministrativeAreaName
-     */
-    public void setAdministrativeAreaName(String AdministrativeAreaName) {
-        this.AdministrativeAreaName = AdministrativeAreaName;
+    public void setAdministrativeAreaName(String administrativeAreaName) {
+        this.administrativeAreaName = administrativeAreaName;
     }
 
-    /**
-     * 
-     * @return
-     *     The SubAdministrativeArea
-     */
-    public beans.SubAdministrativeArea getSubAdministrativeArea() {
-        return SubAdministrativeArea;
+    public SubAdministrativeArea getSubAdministrativeArea() {
+        return subAdministrativeArea;
     }
 
-    /**
-     * 
-     * @param SubAdministrativeArea
-     *     The SubAdministrativeArea
-     */
-    public void setSubAdministrativeArea(beans.SubAdministrativeArea SubAdministrativeArea) {
-        this.SubAdministrativeArea = SubAdministrativeArea;
+    public void setSubAdministrativeArea(SubAdministrativeArea subAdministrativeArea) {
+        this.subAdministrativeArea = subAdministrativeArea;
     }
 
     @Override
@@ -61,7 +39,7 @@ public class AdministrativeArea {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(AdministrativeAreaName).append(SubAdministrativeArea).toHashCode();
+        return new HashCodeBuilder().append(administrativeAreaName).append(subAdministrativeArea).toHashCode();
     }
 
     @Override
@@ -73,7 +51,7 @@ public class AdministrativeArea {
             return false;
         }
         AdministrativeArea rhs = ((AdministrativeArea) other);
-        return new EqualsBuilder().append(AdministrativeAreaName, rhs.AdministrativeAreaName).append(SubAdministrativeArea, rhs.SubAdministrativeArea).isEquals();
+        return new EqualsBuilder().append(administrativeAreaName, rhs.administrativeAreaName).append(subAdministrativeArea, rhs.subAdministrativeArea).isEquals();
     }
 
 }

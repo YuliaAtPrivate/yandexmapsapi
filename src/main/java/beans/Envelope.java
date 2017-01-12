@@ -1,14 +1,12 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Envelope {
 
     @SerializedName("lowerCorner")
@@ -18,38 +16,18 @@ public class Envelope {
     @Expose
     private String upperCorner;
 
-    /**
-     * 
-     * @return
-     *     The lowerCorner
-     */
     public String getLowerCorner() {
         return lowerCorner;
     }
 
-    /**
-     * 
-     * @param lowerCorner
-     *     The lowerCorner
-     */
     public void setLowerCorner(String lowerCorner) {
         this.lowerCorner = lowerCorner;
     }
 
-    /**
-     * 
-     * @return
-     *     The upperCorner
-     */
     public String getUpperCorner() {
         return upperCorner;
     }
 
-    /**
-     * 
-     * @param upperCorner
-     *     The upperCorner
-     */
     public void setUpperCorner(String upperCorner) {
         this.upperCorner = upperCorner;
     }

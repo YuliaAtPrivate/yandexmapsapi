@@ -3,14 +3,12 @@ package beans;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class GeoObjectCollection {
 
     @SerializedName("metaDataProperty")
@@ -20,38 +18,18 @@ public class GeoObjectCollection {
     @Expose
     private List<FeatureMember> featureMember = new ArrayList<FeatureMember>();
 
-    /**
-     * 
-     * @return
-     *     The metaDataProperty
-     */
     public MetaDataProperty getMetaDataProperty() {
         return metaDataProperty;
     }
 
-    /**
-     * 
-     * @param metaDataProperty
-     *     The metaDataProperty
-     */
     public void setMetaDataProperty(MetaDataProperty metaDataProperty) {
         this.metaDataProperty = metaDataProperty;
     }
 
-    /**
-     * 
-     * @return
-     *     The featureMember
-     */
     public List<FeatureMember> getFeatureMember() {
         return featureMember;
     }
 
-    /**
-     * 
-     * @param featureMember
-     *     The featureMember
-     */
     public void setFeatureMember(List<FeatureMember> featureMember) {
         this.featureMember = featureMember;
     }

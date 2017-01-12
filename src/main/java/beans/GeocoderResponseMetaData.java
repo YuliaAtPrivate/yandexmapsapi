@@ -1,14 +1,12 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class GeocoderResponseMetaData {
 
     @SerializedName("request")
@@ -21,56 +19,26 @@ public class GeocoderResponseMetaData {
     @Expose
     private String results;
 
-    /**
-     * 
-     * @return
-     *     The request
-     */
     public String getRequest() {
         return request;
     }
 
-    /**
-     * 
-     * @param request
-     *     The request
-     */
     public void setRequest(String request) {
         this.request = request;
     }
 
-    /**
-     * 
-     * @return
-     *     The found
-     */
     public String getFound() {
         return found;
     }
 
-    /**
-     * 
-     * @param found
-     *     The found
-     */
     public void setFound(String found) {
         this.found = found;
     }
 
-    /**
-     * 
-     * @return
-     *     The results
-     */
     public String getResults() {
         return results;
     }
 
-    /**
-     * 
-     * @param results
-     *     The results
-     */
     public void setResults(String results) {
         this.results = results;
     }

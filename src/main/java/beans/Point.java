@@ -1,34 +1,22 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Point {
 
     @SerializedName("pos")
     @Expose
     private String pos;
 
-    /**
-     * 
-     * @return
-     *     The pos
-     */
     public String getPos() {
         return pos;
     }
 
-    /**
-     * 
-     * @param pos
-     *     The pos
-     */
     public void setPos(String pos) {
         this.pos = pos;
     }

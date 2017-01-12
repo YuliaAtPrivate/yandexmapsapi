@@ -1,57 +1,35 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Thoroughfare {
 
     @SerializedName("ThoroughfareName")
     @Expose
-    private String ThoroughfareName;
+    private String thoroughfareName;
     @SerializedName("Premise")
     @Expose
-    private beans.Premise Premise;
+    private Premise premise;
 
-    /**
-     * 
-     * @return
-     *     The ThoroughfareName
-     */
     public String getThoroughfareName() {
-        return ThoroughfareName;
+        return thoroughfareName;
     }
 
-    /**
-     * 
-     * @param ThoroughfareName
-     *     The ThoroughfareName
-     */
-    public void setThoroughfareName(String ThoroughfareName) {
-        this.ThoroughfareName = ThoroughfareName;
+    public void setThoroughfareName(String thoroughfareName) {
+        this.thoroughfareName = thoroughfareName;
     }
 
-    /**
-     * 
-     * @return
-     *     The Premise
-     */
-    public beans.Premise getPremise() {
-        return Premise;
+    public Premise getPremise() {
+        return premise;
     }
 
-    /**
-     * 
-     * @param Premise
-     *     The Premise
-     */
-    public void setPremise(beans.Premise Premise) {
-        this.Premise = Premise;
+    public void setPremise(Premise premise) {
+        this.premise = premise;
     }
 
     @Override
@@ -61,7 +39,7 @@ public class Thoroughfare {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(ThoroughfareName).append(Premise).toHashCode();
+        return new HashCodeBuilder().append(thoroughfareName).append(premise).toHashCode();
     }
 
     @Override
@@ -73,7 +51,7 @@ public class Thoroughfare {
             return false;
         }
         Thoroughfare rhs = ((Thoroughfare) other);
-        return new EqualsBuilder().append(ThoroughfareName, rhs.ThoroughfareName).append(Premise, rhs.Premise).isEquals();
+        return new EqualsBuilder().append(thoroughfareName, rhs.thoroughfareName).append(premise, rhs.premise).isEquals();
     }
 
 }

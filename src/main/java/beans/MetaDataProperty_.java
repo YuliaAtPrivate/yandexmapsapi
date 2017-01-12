@@ -1,36 +1,24 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class MetaDataProperty_ {
 
     @SerializedName("GeocoderMetaData")
     @Expose
-    private beans.GeocoderMetaData GeocoderMetaData;
+    private GeocoderMetaData geocoderMetaData;
 
-    /**
-     * 
-     * @return
-     *     The GeocoderMetaData
-     */
-    public beans.GeocoderMetaData getGeocoderMetaData() {
-        return GeocoderMetaData;
+    public GeocoderMetaData getGeocoderMetaData() {
+        return geocoderMetaData;
     }
 
-    /**
-     * 
-     * @param GeocoderMetaData
-     *     The GeocoderMetaData
-     */
-    public void setGeocoderMetaData(beans.GeocoderMetaData GeocoderMetaData) {
-        this.GeocoderMetaData = GeocoderMetaData;
+    public void setGeocoderMetaData(GeocoderMetaData geocoderMetaData) {
+        this.geocoderMetaData = geocoderMetaData;
     }
 
     @Override
@@ -40,7 +28,7 @@ public class MetaDataProperty_ {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(GeocoderMetaData).toHashCode();
+        return new HashCodeBuilder().append(geocoderMetaData).toHashCode();
     }
 
     @Override
@@ -52,7 +40,7 @@ public class MetaDataProperty_ {
             return false;
         }
         MetaDataProperty_ rhs = ((MetaDataProperty_) other);
-        return new EqualsBuilder().append(GeocoderMetaData, rhs.GeocoderMetaData).isEquals();
+        return new EqualsBuilder().append(geocoderMetaData, rhs.geocoderMetaData).isEquals();
     }
 
 }

@@ -1,14 +1,12 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class GeocoderMetaData {
 
     @SerializedName("kind")
@@ -22,78 +20,38 @@ public class GeocoderMetaData {
     private String precision;
     @SerializedName("AddressDetails")
     @Expose
-    private beans.AddressDetails AddressDetails;
+    private AddressDetails addressDetails;
 
-    /**
-     * 
-     * @return
-     *     The kind
-     */
     public String getKind() {
         return kind;
     }
 
-    /**
-     * 
-     * @param kind
-     *     The kind
-     */
     public void setKind(String kind) {
         this.kind = kind;
     }
 
-    /**
-     * 
-     * @return
-     *     The text
-     */
     public String getText() {
         return text;
     }
 
-    /**
-     * 
-     * @param text
-     *     The text
-     */
     public void setText(String text) {
         this.text = text;
     }
 
-    /**
-     * 
-     * @return
-     *     The precision
-     */
     public String getPrecision() {
         return precision;
     }
 
-    /**
-     * 
-     * @param precision
-     *     The precision
-     */
     public void setPrecision(String precision) {
         this.precision = precision;
     }
 
-    /**
-     * 
-     * @return
-     *     The AddressDetails
-     */
-    public beans.AddressDetails getAddressDetails() {
-        return AddressDetails;
+    public AddressDetails getAddressDetails() {
+        return addressDetails;
     }
 
-    /**
-     * 
-     * @param AddressDetails
-     *     The AddressDetails
-     */
-    public void setAddressDetails(beans.AddressDetails AddressDetails) {
-        this.AddressDetails = AddressDetails;
+    public void setAddressDetails(AddressDetails addressDetails) {
+        this.addressDetails = addressDetails;
     }
 
     @Override
@@ -103,7 +61,7 @@ public class GeocoderMetaData {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(kind).append(text).append(precision).append(AddressDetails).toHashCode();
+        return new HashCodeBuilder().append(kind).append(text).append(precision).append(addressDetails).toHashCode();
     }
 
     @Override
@@ -115,7 +73,7 @@ public class GeocoderMetaData {
             return false;
         }
         GeocoderMetaData rhs = ((GeocoderMetaData) other);
-        return new EqualsBuilder().append(kind, rhs.kind).append(text, rhs.text).append(precision, rhs.precision).append(AddressDetails, rhs.AddressDetails).isEquals();
+        return new EqualsBuilder().append(kind, rhs.kind).append(text, rhs.text).append(precision, rhs.precision).append(addressDetails, rhs.addressDetails).isEquals();
     }
 
 }

@@ -1,36 +1,24 @@
 
 package beans;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@Generated("org.jsonschema2pojo")
 public class Premise {
 
     @SerializedName("PremiseNumber")
     @Expose
-    private String PremiseNumber;
+    private String premiseNumber;
 
-    /**
-     * 
-     * @return
-     *     The PremiseNumber
-     */
     public String getPremiseNumber() {
-        return PremiseNumber;
+        return premiseNumber;
     }
 
-    /**
-     * 
-     * @param PremiseNumber
-     *     The PremiseNumber
-     */
-    public void setPremiseNumber(String PremiseNumber) {
-        this.PremiseNumber = PremiseNumber;
+    public void setPremiseNumber(String premiseNumber) {
+        this.premiseNumber = premiseNumber;
     }
 
     @Override
@@ -40,7 +28,7 @@ public class Premise {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(PremiseNumber).toHashCode();
+        return new HashCodeBuilder().append(premiseNumber).toHashCode();
     }
 
     @Override
@@ -52,7 +40,7 @@ public class Premise {
             return false;
         }
         Premise rhs = ((Premise) other);
-        return new EqualsBuilder().append(PremiseNumber, rhs.PremiseNumber).isEquals();
+        return new EqualsBuilder().append(premiseNumber, rhs.premiseNumber).isEquals();
     }
 
 }
