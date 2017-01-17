@@ -58,7 +58,7 @@ public class GeoCoderApi {
                     .queryParams(geoCoderApi.params)
                     .log().all()
                     .get(MAP_API_URI);
-            log(response.asString());
+            log(response.prettyPrint());
             return response;
         }
     }
