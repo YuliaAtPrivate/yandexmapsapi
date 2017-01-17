@@ -61,7 +61,6 @@ public class GeoCoderApi {
                     .filter(logRequestTo(LogStream.logStream()))
                     .log().all()
                     .get(MAP_API_URI);
-
             log(response.prettyPrint());
             return response;
         }
