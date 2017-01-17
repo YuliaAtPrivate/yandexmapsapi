@@ -12,6 +12,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.jayway.restassured.filter.log.RequestLoggingFilter.logRequestTo;
+
 public class GeoCoderApi {
     private static final String MAP_API_URI = "https://geocode-maps.yandex.ru/1.x/";
     private static final String PARAM_GEOCODE = "geocode";
@@ -56,9 +58,11 @@ public class GeoCoderApi {
         public Response callApi() {
             Response response = RestAssured.with()
                     .queryParams(geoCoderApi.params)
+                    .filter(logRequestTo(LogStream.logStream()))
                     .log().all()
                     .get(MAP_API_URI);
-            log(response.asString());
+
+            log(response.prettyPrint());
             return response;
         }
     }
