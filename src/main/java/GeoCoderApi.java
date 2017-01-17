@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.jayway.restassured.filter.log.RequestLoggingFilter.logRequestTo;
+import static javax.swing.DebugGraphics.logStream;
 
 public class GeoCoderApi {
     private static final String MAP_API_URI = "https://geocode-maps.yandex.ru/1.x/";
@@ -58,7 +59,7 @@ public class GeoCoderApi {
         public Response callApi() {
             Response response = RestAssured.with()
                     .queryParams(geoCoderApi.params)
-                    .filter(logRequestTo(LogStream.logStream()))
+                    .filter(logRequestTo(logStream()))
                     .log().all()
                     .get(MAP_API_URI);
             log(response.prettyPrint());
